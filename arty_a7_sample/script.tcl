@@ -7,4 +7,9 @@ place_design
 phys_opt_design -placement_opt
 route_design
 phys_opt_design -routing_opt
-write_bitstream -file arty_a7_sample_top.bit
+write_bitstream -force -file arty_a7_sample_top.bit
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE ./arty_a7_sample_top.bit [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
