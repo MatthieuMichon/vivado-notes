@@ -1,4 +1,23 @@
-This document contains notes and thoughts regarding the Vivado EDA tool provided by Xilinx, while focusing on headless operation.
+This document provides notes regarding the Vivado EDA tool provided by Xilinx. Attention is focused on headless operations.
+
+# Version 2019.2
+
+## Installation
+
+The web installer doesn't provide a meaningful advantage against retrieving the complete image. It is easier to get the full archive and extract it.
+
+### Headless Installation
+
+Installing the Webpack edition without the GUI:
+
+```shell
+$ ./xsetup \
+    --batch Install \
+    --agree XilinxEULA,3rdPartyEULA,WebTalkTerms \
+    --edition "Vivado HL WebPACK" \
+    --location <installation directory>/Xilinx \
+    --xdebug
+```
 
 # Version 2019.1
 
